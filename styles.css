@@ -1,0 +1,277 @@
+/**** Fuentes y colores del documento ****/
+
+:root {
+  --color-primary: #D9716F;
+  --color-secondary: #F8F3ED;
+  --color-terciary: #E5DDD7;
+  --color-quaternary: #D7C9C1;
+  --color-dark:#0D0D0D;
+
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+  body {
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+    font-family:'Poppins', sans-serif;
+   
+  }
+
+/**** Menú ****/
+
+  nav{
+      display: flex;
+      align-items:center;
+      justify-content: space-around;
+      min-height:8vh;
+      background-color:var(--color-primary);
+  }
+
+  .ham{
+    display:none;
+    background-color:transparent;
+    cursor: pointer;
+    border:none;
+    margin:0;
+    padding:0;
+    }
+    
+    .ham span{
+        background-color:var(--color-secondary);
+        display:block;
+        height:3px;
+        width: 28px;
+        margin:10px auto;
+        border-radius:2px;    
+    }
+  .enlaces-menu{
+      display:flex;
+      padding: 10px;
+  }
+  .enlaces-menu li{
+      padding: 10px 40px;
+      list-style-type: none;
+      transition: 0.3s;
+      border-radius: 20px;
+  }
+
+  .enlaces-menu li a{
+      text-decoration:none;
+      font-size: 1.5 rem;
+      color: var(--color-dark);
+      font-weight:600;
+    }
+  .enlaces-menu li:hover{
+      background-color:var(--color-terciary);
+
+  }
+
+/**** Section inicio ****/
+
+  .wrapper-home{
+    display:flex;
+    align-items: center;
+    background-color: var(--color-secondary);
+    height: 100vh;
+  }
+  .container-photo{
+    display: flex;
+    justify-content: center;
+    width: 50vw;
+  }
+    .container-photo img{
+      width:50%;
+      position: relative;
+      border-radius: 100%;
+    }
+  .container-about{
+    width:50vw;
+  }
+    h1{
+      font-size: 2rem;
+      font-weight: 800;
+      color: var(--color-primary);
+    }
+    .container-about p {
+      font-size: 1rem;
+      margin-bottom: 0;
+    }
+
+
+/**** backgrounds de cada section, h2 y cards****/
+
+.container-training{
+  background-color: var(--color-terciary);
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.container-experience{
+  background-color: var(--color-quaternary);
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.container-contact{
+  background-color: var(--color-terciary);
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+h2{
+  margin-top: 0;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+}
+
+h3{
+  background-color: #D9716F;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  margin-top: 0;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+  font-weight: 600;
+}
+
+.title-2{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+
+}
+.title-2 i{
+  font-size: 2em;
+}
+.wrapper{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+}
+  .card{
+  border:solid 0.01px #dfd2d2;
+  background-color: var(--color-secondary);
+  text-align: center;
+  border-radius: 1rem;
+  position: relative;
+  width: 300px;
+  margin: 20px 15px 0px 15px;
+
+  }
+    .text-card{
+      text-align: left;
+      padding: 0 25px 20px 25px;
+    }
+
+  .container-contact .wrapper .card{
+    padding-top: 50px;
+    padding-bottom: 50px;
+    width: 50vw;
+  }
+
+
+  .container-contact .wrapper .card i{
+    font-size: 5em;
+    margin-left: 20px;
+    margin-right: 20px;
+    color: var(--color-dark);
+  }
+  
+
+
+/**** Dispositivos moviles ****/
+
+  @media (max-width:768px) {
+    /**** Menú moviles****/
+      .ham{
+          display:block;
+          cursor:pointer;
+          position: absolute; 
+          top:15px;
+          right:25px;
+          transition: 0.2s  0.1s; 
+  
+      }
+   
+      
+      nav{
+          flex-direction:column;
+          align-items: flex-start;
+          padding-top: 25px;
+          padding-bottom: 25px;
+      }
+
+      .logo{
+        padding-left:25px;
+        
+      }
+
+      .enlaces-menu{
+        
+          flex-direction:column;
+          justify-content: space-around;
+          align-items:center;
+          height: 92vh;         
+          margin:0;
+          padding:0; 
+          display:none;
+          opacity:0;
+          transition: opacity 5s ease-out;
+          width:100%;
+      
+         
+      }
+      .enlaces-menu li{
+        text-align:center;
+        width:100%;
+        padding:20px;    
+    }
+
+  /****section de inicio moviles****/
+
+  .wrapper-home{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+    .container-photo{
+      margin-top: 20px;
+    }
+    .container-photo img{
+      width: 70%;
+    }
+}
+
+/**** Animaciones del Menú ****/
+  
+@keyframes muestraMenu {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+.enlaces-menu.activado{
+    display:flex; 
+    animation: muestraMenu 350ms ease-in-out both;
+}
+
+.br-1.animado{
+  transform: rotate(-45deg) translate(-10px, 8px);
+}
+
+.br-2.animado{
+  opacity: 0;
+}
+.br-3.animado{
+  transform: rotate(45deg) translate(-10px, -8px);
+}
+
+.ham.girar:hover{
+   transform:rotate(360deg);
+}
